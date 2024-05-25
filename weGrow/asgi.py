@@ -1,5 +1,5 @@
 """
-ASGI config for weGrow project.
+ASGI configure for weGrow project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

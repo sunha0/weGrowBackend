@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import sys, os
+from configparser import ConfigParser
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,6 +21,18 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
+Config_DIR = os.path.join(BASE_DIR, 'configure')
+
+config = ConfigParser()
+weGrow_env = os.environ.get("weGrow_ENV", "")
+
+if weGrow_env == "dev":
+    config.read(os.path.join(Config_DIR, 'configure-dev.conf'))
+elif weGrow_env == "pro":
+    config.read(os.path.join(Config_DIR, 'configure-pro.conf'))
+else:
+    print(os.path.join(Config_DIR, 'config.conf'))
+    config.read(os.path.join(Config_DIR, 'config.conf'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-&p71c1igcs-!mt$3er+-^2bk9qth_7rg9l-@_^esxut^_o5zx-'
@@ -75,10 +88,24 @@ WSGI_APPLICATION = 'weGrow.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config.get("mysql", "name"),
+        'USER': config.get("mysql", "user"),
+        'PASSWORD': config.get("mysql", "password"),
+        'HOST': config.get("mysql", "host"),
+        'PORT': config.get("mysql", "port"),
+        'OPTIONS': {
+            # 'init_command': 'SET default_storage_engine=INNODB',
+            "init_command": "SET foreign_key_checks = 0;",
+        }
     }
 }
 
@@ -115,7 +142,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+AUTH_USER_MODEL = 'users.SysUser'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
