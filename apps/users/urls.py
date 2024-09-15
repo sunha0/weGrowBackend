@@ -7,7 +7,7 @@ Examples:
 Function views
     1. Add an import:  from my_app import views
     2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
+Class-based viegit
     1. Add an import:  from other_app.views import Home
     2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
 Including another URLconf
@@ -16,9 +16,14 @@ Including another URLconf
 """
 
 from django.urls import re_path,include
+from rest_framework.routers import DefaultRouter
 
+from .views import *
+router = DefaultRouter()
+
+# router.register(r'check-is-admin', CheckIsAdminViewSet, basename="检测用户是否是管理员")  # 检测用户是否是管理员
+# router.register(r'user', UserListViewSet, basename="用户管理")
 
 urlpatterns = [
-    # re_path('^admin/', include(admin.site.urls)),
-
+    re_path(r'^', include(router.urls)),
 ]

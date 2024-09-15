@@ -51,7 +51,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
     'users.apps.UsersConfig',
+    'websocket.apps.WebsocketConfig'
 ]
 
 MIDDLEWARE = [
@@ -83,7 +85,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'weGrow.wsgi.application'
+# WSGI_APPLICATION = 'weGrow.wsgi.application'
+ASGI_APPLICATION = 'weGrow.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
