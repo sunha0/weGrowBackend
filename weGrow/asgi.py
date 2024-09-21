@@ -12,8 +12,7 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 from django.core.asgi import get_asgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'weGrow.settings')
 
-from apps.webSockets import urls
-
+from apps.ws import urls
 
 application = ProtocolTypeRouter({
     'http': get_asgi_application(),
