@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13f10bb7-10c7-40e1-a6e3-192f13a1bbf2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/weGrowBackend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/weGrowBackend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weGrow/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/weGrow/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weGrow/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/webSockets/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weGrow/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/weGrow/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weGrow/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/weGrow/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +66,7 @@
       <recent name="F:\开发\weGrowBackend\apps\users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\开发\weGrowBackend\apps\ws" />
       <recent name="F:\开发\weGrowBackend\apps" />
       <recent name="F:\开发\weGrowBackend\webSockets" />
       <recent name="F:\开发\weGrowBackend\websocket" />
@@ -170,7 +158,7 @@
       <workItem from="1726403560386" duration="963000" />
       <workItem from="1726462708298" duration="2300000" />
       <workItem from="1726918872457" duration="5445000" />
-      <workItem from="1726960980645" duration="968000" />
+      <workItem from="1726960980645" duration="1607000" />
     </task>
     <servers />
   </component>

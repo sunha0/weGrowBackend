@@ -20,10 +20,10 @@ from rest_framework.routers import DefaultRouter
 
 from .views import *
 router = DefaultRouter()
-
+#
 # router.register(r'check-is-admin', CheckIsAdminViewSet, basename="检测用户是否是管理员")  # 检测用户是否是管理员
 # router.register(r'user', UserListViewSet, basename="用户管理")
 
 urlpatterns = [
-    re_path(r'^', include(router.urls)),
+    re_path('^admin/', CheckIsAdminViewSet),
 ]
