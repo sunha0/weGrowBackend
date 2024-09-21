@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class WebsocketConfig(AppConfig):
+class WsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'websocket'
+    name = 'ws'

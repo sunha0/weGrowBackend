@@ -51,9 +51,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'channels',
-    'users.apps.UsersConfig',
-    'websocket.apps.WebsocketConfig'
+    'users',
+    'webSockets',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -85,32 +85,31 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'weGrow.wsgi.application'
+WSGI_APPLICATION = 'weGrow.wsgi.application'
 ASGI_APPLICATION = 'weGrow.asgi.application'
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config.get("mysql", "name"),
-        'USER': config.get("mysql", "user"),
-        'PASSWORD': config.get("mysql", "password"),
-        'HOST': config.get("mysql", "host"),
-        'PORT': config.get("mysql", "port"),
-        'OPTIONS': {
-            # 'init_command': 'SET default_storage_engine=INNODB',
-            "init_command": "SET foreign_key_checks = 0;",
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': config.get("mysql", "name"),
+#         'USER': config.get("mysql", "user"),
+#         'PASSWORD': config.get("mysql", "password"),
+#         'HOST': config.get("mysql", "host"),
+#         'PORT': config.get("mysql", "port"),
+#         'OPTIONS': {
+#             # 'init_command': 'SET default_storage_engine=INNODB',
+#             "init_command": "SET foreign_key_checks = 0;",
+#         }
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

@@ -17,8 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import re_path,include
 
-
 urlpatterns = [
-    re_path(r"^(?P<version>[v1|v2]+)/users/", include("apps.users.urls"))
-]
+    re_path(r"^(?P<version>[v1|v2]+)/users/", include("apps.users.urls")),
+    ]
 

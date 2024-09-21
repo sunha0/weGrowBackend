@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13f10bb7-10c7-40e1-a6e3-192f13a1bbf2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/weGrow/routing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/weGrowBackend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/weGrowBackend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weGrow/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/weGrow/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weGrow/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/webSockets/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weGrow/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/weGrow/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weGrow/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/weGrow/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +39,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -42,29 +53,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Django Server.weGrowBackend.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "F:/开发/weGrowBackend/websocket",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Django Server.weGrowBackend.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/开发/weGrowBackend/websocket&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\开发\weGrowBackend\websocket" />
       <recent name="F:\开发\weGrowBackend\weGrow" />
       <recent name="F:\开发\weGrowBackend" />
       <recent name="F:\开发\weGrowBackend\apps\users" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\开发\weGrowBackend\apps" />
+      <recent name="F:\开发\weGrowBackend\webSockets" />
+      <recent name="F:\开发\weGrowBackend\websocket" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.weGrowBackend">
@@ -100,12 +117,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.8 (weGrowBackend)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
+      <option name="port" value="8888" />
       <option name="host" value="localhost" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
@@ -115,6 +133,10 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django Server.weGrowBackend" />
+      <item itemvalue="Python.test" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.test" />
@@ -143,7 +165,12 @@
       <workItem from="1717166501568" duration="357000" />
       <workItem from="1717240868073" duration="2437000" />
       <workItem from="1717244048814" duration="743000" />
-      <workItem from="1726394519811" duration="3502000" />
+      <workItem from="1726394519811" duration="4108000" />
+      <workItem from="1726399685100" duration="2784000" />
+      <workItem from="1726403560386" duration="963000" />
+      <workItem from="1726462708298" duration="2300000" />
+      <workItem from="1726918872457" duration="5445000" />
+      <workItem from="1726960980645" duration="968000" />
     </task>
     <servers />
   </component>
